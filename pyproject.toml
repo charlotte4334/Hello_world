@@ -8,10 +8,9 @@ description = "A Hello World Project"
 readme = "README.md"
 # Pin for an analysis (== or ~= for patching) and minimal for a package (>=)
 requires-python = "~=3.13.0"
+version = "0.1.0"
 # Relative path to the license file
 license.file = "LICENSE"
-# Use git tags for versioning
-dynamic = ["version"]
 
 dependencies = [
     # pin (== or ~= with patches) when developing scripts, minimal (>=) for packages
@@ -22,10 +21,5 @@ dependencies = [
 packages = ["src/exohw"]
 
 [build-system]
-# Require hatch-vcs alongside hatchling to enable Git tag versioning
-requires = ["hatchling", "hatch-vcs"]
+requires = ["hatchling"]
 build-backend = "hatchling.build"
-
-# Use the git version to set the version of the package
-[tool.hatch.version]
-source = "vcs"
