@@ -1,5 +1,5 @@
 # project locations
-data/
+# data/
 
 # container binaries
 *.sif
